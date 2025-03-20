@@ -2,24 +2,24 @@ import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
   // the site's root Notion page (required)
-  rootNotionPageId: '1acc9a218faa81369783f74b3037f71a',
+  rootNotionPageId: process.env.NEXT_PUBLIC_ROOT_NOTION_PAGE_ID || '1bb1a2d471fe8148b2f3c09d6c83d389',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
   rootNotionSpaceId: undefined,
 
   // basic site info (required)
-  name: 'FLEXYZ Tech Blog',
-  domain: 'blog.flexyz.work',
-  author: 'flexyzwork',
+  name: 'Blog',
+  domain: 'blog.example.com',
+  author: 'flexyz',
 
   // open graph metadata (optional)
-  description: "Flexyz's Tech: Next.js + Notion 기반 테크 블로그",
+  description: "Next.js + Notion Blog Template",
 
   // social usernames (optional)
-  twitter: 'flexyzwork',
-  github: 'flexyzwork',
-  // linkedin: 'flexyzwork',
+  twitter: '',
+  github: '',
+  // linkedin: '',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
