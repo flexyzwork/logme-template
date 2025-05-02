@@ -1,20 +1,21 @@
 import { siteConfig } from './lib/site-config'
 
+
 export default siteConfig({
   // the site's root Notion page (required)
-  rootNotionPageId: process.env.NEXT_PUBLIC_ROOT_NOTION_PAGE_ID || '1bb1a2d471fe8148b2f3c09d6c83d389',
+  rootNotionPageId: process.env.NEXT_PUBLIC_ROOT_NOTION_PAGE_ID,
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
   rootNotionSpaceId: undefined,
 
   // basic site info (required)
-  name: 'Blog',
-  domain: 'blog.example.com',
-  author: 'flexyz',
+  name: process.env.NEXT_PUBLIC_SITE_TITLE.toUpperCase(),
+  domain: `${process.env.NEXT_PUBLIC_SUB}.logme.click`,
+  author: process.env.NEXT_PUBLIC_AUTHOR,
 
   // open graph metadata (optional)
-  description: "Next.js + Notion Blog Template",
+  description: process.env.NEXT_PUBLIC_SITE_DESCRIPTION,
 
   // social usernames (optional)
   twitter: '',
